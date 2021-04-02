@@ -1,0 +1,12 @@
+git@github.com:ssmohapatra/tf.git
+git@github.com:ssmohapatra/cf.git
+
+cd /
+
+ssh-add ~/.ssh/ssmcoderepo_rsa 
+
+git add *
+
+git commit -m "comment"
+
+git push
