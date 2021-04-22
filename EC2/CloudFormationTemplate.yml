@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Template to create an EC2 instance and enable SSH
+
+Resources:
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: "t2.micro"
+      ImageId: "ami-0998bf58313ab53da"
+      KeyName: SandBoxFT
+      SecurityGroups: 
+         - launch-wizard-1
+      Tags:
+        - Key: "Dept"
+          Value: "HR"
+Outputs: 
+  InstanceID:
+    Description: The Instance ID
+    Value: !Ref MyEC2Instance
